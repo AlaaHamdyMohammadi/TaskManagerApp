@@ -16,7 +16,7 @@ export default function Index() {
         <h1>TASKS</h1>
         <p>TASKS MANAGER APPLICATION</p>
         <p id="cta">
-          <Link to="/tasks">Try Now!</Link>
+          <Link to="/addTask">Try Now!</Link>
         </p>
       </main>
     </>

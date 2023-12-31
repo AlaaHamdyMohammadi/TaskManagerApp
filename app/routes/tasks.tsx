@@ -15,7 +15,7 @@ function TasksPage() {
 
   return (
     <main>
-      <NewTask />
+      
       <TaskList tasks={tasks} />
     </main>
   );
@@ -35,25 +35,7 @@ export async function loader() {
   return tasks;
 }
 
-export async function action({ request }: { request: Request }) {
-  const formData = await request.formData();
-  const taskData = {
-    title: formData.get("title"),
-    content: formData.get("description"),
-  };
 
-  const existingTasks = await getStoredTasks();
-  const id = new Date().toISOString();
-  const updatedTasks = existingTasks.concat({
-    id,
-    ...taskData,
-  });
-  await storeTasks(updatedTasks);
-  await new Promise<void>((resolve, reject) => {
-    setTimeout(() => resolve(), 2000);
-  });
-  return redirect("/tasks");
-}
 
 export function links() {
   return [...newTaskLinks(), ...taskListLinks()];
@@ -68,7 +50,6 @@ interface ErrorBoundaryProps {
 export function ErrorBoundary({ error }: ErrorBoundaryProps) {
   return (
     <>
-      <NewTask />
       <main className="error">
         <p>Could not found any tasks.</p>
         {error && <p>{error.message}</p>}
