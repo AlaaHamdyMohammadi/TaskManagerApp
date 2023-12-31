@@ -76,7 +76,25 @@ export async function action({ request }: { request: Request }) {
   }
 }
 
+// export async function action({ request }: { request: Request }) {
+//   const formData = await request.formData();
+//   const taskData = {
+//     title: formData.get("title"),
+//     description: formData.get("description"),
+//   };
 
+//   const existingTasks = await getStoredTasks();
+//   const id = new Date().toISOString();
+//   const updatedTasks = existingTasks.concat({
+//     id,
+//     ...taskData,
+//   });
+//   await storeTasks(updatedTasks);
+//   await new Promise<void>((resolve) => {
+//     setTimeout(() => resolve(), 2000);
+//   });
+//   return redirect("/tasks");
+// }
 
 interface ErrorBoundaryProps {
   error?: {
