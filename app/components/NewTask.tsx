@@ -15,8 +15,8 @@ function NewTask() {
         <input type="text" id="title" name="title" required />
       </p>
       <p>
-        <label htmlFor="content">Content</label>
-        <textarea id="content" name="content" required />
+        <label htmlFor="description">Description</label>
+        <textarea id="description" name="description" required />
       </p>
       <div className="form-actions">
         <button disabled={isSubmitting}>{isSubmitting ? 'Adding...' : 'Add task'}</button>
