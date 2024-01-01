@@ -1,10 +1,8 @@
 import { Form, useNavigation } from "@remix-run/react";
 import styles from "./NewTask.css";
-// import { useTransition } from "react";
 
 function NewTask() {
     const navigation = useNavigation();
-    // const data = useActionData();
     const isSubmitting = navigation.state === 'submitting';
 
   return (
