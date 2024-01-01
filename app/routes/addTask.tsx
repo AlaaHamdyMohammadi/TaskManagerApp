@@ -23,7 +23,7 @@ export async function loader() {
   return tasks;
 }
 
-async function validateFormData(formData: FormData) {
+export async function validateFormData(formData: FormData) {
   const title = formData.get("title")?.toString().trim();
   const description = formData.get("description")?.toString().trim();
 

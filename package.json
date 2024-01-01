@@ -18,6 +18,7 @@
     "@remix-run/serve": "^2.4.1",
     "@remix-run/testing": "^2.4.1",
     "@testing-library/react": "^14.1.2",
+    "fetch-mock": "^9.11.0",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
