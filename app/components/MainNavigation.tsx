@@ -11,7 +11,7 @@ function MainNavigation() {
           <NavLink to="/addTask">Add Task</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/tasks">My Tasks</NavLink>
+          <NavLink to="/tasks">View Tasks</NavLink>
         </li>
       </ul>
     </nav>
