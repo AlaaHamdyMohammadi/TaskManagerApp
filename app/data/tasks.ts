@@ -10,3 +10,4 @@ export async function getStoredTasks() {
 export function storeTasks(tasks: string) {
   return fs.writeFile("tasks.json", JSON.stringify({ tasks: tasks || [] }));
 }
+

@@ -8,10 +8,13 @@ function TaskDetailsPage() {
   useEffect(() => {
     document.title = `${task.title}`;
   }, [task.title]);
+
+  
+
   return (
     <main id="task-details">
       <header>
-        <Link>delete</Link>
+        <Link >delete</Link>
         <Link>Edit</Link>
         <nav>
           <Link to="/tasks">Back to all tasks</Link>
