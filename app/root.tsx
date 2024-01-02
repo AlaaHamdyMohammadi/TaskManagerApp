@@ -10,6 +10,9 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
 
 export default function App() {
   return (
@@ -66,8 +69,4 @@ export function ErrorBoundary({ error }: ErrorBoundaryProps) {
       </body>
     </html>
   );
-}
-
-export function links() {
-  return [{ rel: "stylesheet", href: styles }];
 }

@@ -9,20 +9,22 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
-  return (
-    <>
-      <main id="content">
-        <h1>TASKS</h1>
-        <p>TASKS MANAGER APPLICATION</p>
-        <p id="cta">
-          <Link to="/addTask">Try Now!</Link>
-        </p>
-      </main>
-    </>
-  );
-}
-
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
+};
+
+// CAMEL CASE: addTask
+// KEBAB CASE: add-task <-- convention for routes
+// PASCAL CASE: AddTask
+
+export default function Index() {
+  return (
+    <main id="content">
+      <h1>TASKS</h1>
+      <p>TASKS MANAGER APPLICATION</p>
+      <p id="cta">
+        <Link to="/add-task">Try Now!</Link>
+      </p>
+    </main>
+  );
 }

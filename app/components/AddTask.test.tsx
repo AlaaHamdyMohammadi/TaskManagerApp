@@ -3,7 +3,7 @@ import { useLoaderData } from "@remix-run/react";
 import { createRemixStub } from "@remix-run/testing";
 import { render, screen, waitFor } from "@testing-library/react";
 import fetchMock from "fetch-mock";
-import { loader, action, validateFormData } from "./../routes/addTask";
+import { loader, action, validateFormData } from "../routes/add-task";
 
 test("renders loader data", async () => {
   function AddTask() {
