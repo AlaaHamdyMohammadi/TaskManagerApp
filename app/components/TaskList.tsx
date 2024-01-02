@@ -1,15 +1,6 @@
 import { Link } from "@remix-run/react";
-import styles from "./TaskList.css";
 
-interface Task {
-  id: string;
-  title: string;
-  content: string;
-}
 
-interface TaskListProps {
-  tasks: Task[];
-}
 
 function TaskList({ tasks }: TaskListProps) {
   return (
@@ -46,6 +37,3 @@ function TaskList({ tasks }: TaskListProps) {
 
 export default TaskList;
 
-export function links() {
-  return [{ rel: "stylesheet", href: styles }];
-}
